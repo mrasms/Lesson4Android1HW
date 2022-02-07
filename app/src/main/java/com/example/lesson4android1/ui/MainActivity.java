@@ -11,7 +11,7 @@ import com.example.lesson4android1.R;
 import com.example.lesson4android1.adapter.AdapterBook;
 import com.example.lesson4android1.listener.OnItemClickListener;
 import com.example.lesson4android1.model.BooksModel;
-import com.example.lesson4android1.data.BookClient;
+import com.example.lesson4android1.data.BooksClient;
 
 import java.util.ArrayList;
 
@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void inItView() {
         recyclerView = findViewById(R.id.recycler_view);
-        list = BookClient.getBook();
+        list = BooksClient.getBook();
         adapterBook = new AdapterBook(list);
         recyclerView.setAdapter(adapterBook);
         adapterBook.setOnItemClickListener(new OnItemClickListener() {

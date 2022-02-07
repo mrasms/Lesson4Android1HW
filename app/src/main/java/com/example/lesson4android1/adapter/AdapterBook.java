@@ -29,7 +29,7 @@ public class AdapterBook extends RecyclerView.Adapter<AdapterBook.HolderBook> {
     @NonNull
     @Override
     public AdapterBook.HolderBook onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_holder_book,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_holder, parent, false);
         return new HolderBook(view);
     }
 
@@ -45,12 +45,12 @@ public class AdapterBook extends RecyclerView.Adapter<AdapterBook.HolderBook> {
     }
 
 
-
     public class HolderBook extends RecyclerView.ViewHolder {
         TextView tvBookName;
+
         public HolderBook(@NonNull View itemView) {
             super(itemView);
-            tvBookName=itemView.findViewById(R.id.tv_book_name);
+            tvBookName = itemView.findViewById(R.id.tv_book_name);
         }
 
 
