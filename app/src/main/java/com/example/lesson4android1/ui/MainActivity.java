@@ -18,8 +18,8 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    ArrayList<BooksModel> list = new ArrayList<>();
     AdapterBook adapterBook;
-    ArrayList<BooksModel> list= new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClickListener(BooksModel model) {
                 Intent intent = new Intent(MainActivity.this, DescriptionActivity.class);
-                intent.putExtra("model",model);
+                intent.putExtra("model", model);
                 startActivity(intent);
 
             }

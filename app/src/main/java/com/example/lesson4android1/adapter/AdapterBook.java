@@ -15,8 +15,9 @@ import com.example.lesson4android1.model.BooksModel;
 import java.util.ArrayList;
 
 public class AdapterBook extends RecyclerView.Adapter<AdapterBook.HolderBook> {
-    ArrayList<BooksModel> list;
+
     OnItemClickListener onItemClickListener;
+    ArrayList<BooksModel> list;
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
@@ -54,12 +55,12 @@ public class AdapterBook extends RecyclerView.Adapter<AdapterBook.HolderBook> {
         }
 
 
-        public void onBind(BooksModel bookModel) {
-            tvBookName.setText(bookModel.getName());
+        public void onBind(BooksModel booksModel) {
+            tvBookName.setText(booksModel.getName());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    onItemClickListener.onItemClickListener(bookModel);
+                    onItemClickListener.onItemClickListener(booksModel);
                 }
             });
         }
