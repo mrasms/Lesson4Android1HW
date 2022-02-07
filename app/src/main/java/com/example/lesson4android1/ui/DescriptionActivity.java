@@ -1,13 +1,15 @@
-package com.example.lesson4android1;
+package com.example.lesson4android1.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.widget.TextView;
-import com.example.lesson4android1.model.BookModel;
+
+import com.example.lesson4android1.R;
+import com.example.lesson4android1.model.BooksModel;
 
 
-public class Description extends AppCompatActivity {
+public class DescriptionActivity extends AppCompatActivity {
 
     TextView tvDescription;
     TextView tvTitle;
@@ -20,7 +22,7 @@ public class Description extends AppCompatActivity {
         setContentView(R.layout.activity_description);
         inItView();
         Bundle bundle = getIntent().getExtras();
-        BookModel model = (BookModel) bundle.getSerializable("model");
+        BooksModel model = (BooksModel) bundle.getSerializable("model");
         tvNameOfBook.setText(model.getName());
         tvDescription.setText(model.getDescription());
         tvTitle.setText("Название Книги:");

@@ -10,19 +10,19 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lesson4android1.R;
 import com.example.lesson4android1.listener.OnItemClickListener;
-import com.example.lesson4android1.model.BookModel;
+import com.example.lesson4android1.model.BooksModel;
 
 import java.util.ArrayList;
 
 public class AdapterBook extends RecyclerView.Adapter<AdapterBook.HolderBook> {
-    ArrayList<BookModel> list;
+    ArrayList<BooksModel> list;
     OnItemClickListener onItemClickListener;
 
     public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
         this.onItemClickListener = onItemClickListener;
     }
 
-    public AdapterBook(ArrayList<BookModel> list) {
+    public AdapterBook(ArrayList<BooksModel> list) {
         this.list = list;
     }
 
@@ -54,7 +54,7 @@ public class AdapterBook extends RecyclerView.Adapter<AdapterBook.HolderBook> {
         }
 
 
-        public void onBind(BookModel bookModel) {
+        public void onBind(BooksModel bookModel) {
             tvBookName.setText(bookModel.getName());
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
