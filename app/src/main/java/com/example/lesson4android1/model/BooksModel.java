@@ -6,7 +6,6 @@ public class BooksModel implements Serializable {
     private String name;
     private String description;
 
-
     public BooksModel(String name, String description) {
         this.name = name;
         this.description = description;
